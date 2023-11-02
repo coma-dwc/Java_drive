@@ -68,10 +68,23 @@ num = 7.8F; //問題なし
 //10進数だけでなく、2進数や16進数、浮動小数点数でも桁区切り文字を記述することが出来る
 //例) 0b1_11_11_10_10   0x3f02_ef01   3.14_15_78
 
+/*
 class JSample5_1 {
 	public static void main(String[] args) {
 		System.out.println(1_234_567); //出力結果 1234567
 		System.out.println(0b10_11_01_10); //出力結果 182
 	}
 }
+*/
 
+
+
+
+//■論理値リテラル：trueまたはfalse
+
+class JSample5_1 {
+	public static void main(String[] args) {
+		System.out.println(10 > 7); //出力結果 true
+		System.out.println(5 == 4); //出力結果 false
+	}
+}
