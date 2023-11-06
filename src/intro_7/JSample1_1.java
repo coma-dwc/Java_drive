@@ -219,7 +219,7 @@ class JSample1_1 {
 
 
 
-
+/*
 //■関係演算子と等価演算子
 class JSample1_1 {
 	public static void main(String[] args) {
@@ -235,5 +235,33 @@ class JSample1_1 {
 		System.out.println("a >= b : " + (a >= b)); //出力結果：a >= b : true
 		System.out.println("a == b : " + (a == b)); //出力結果：a == b : false
 		System.out.println("a != b : " + (a != b)); //出力結果：a != b : true
+	}
+}
+*/
+
+
+
+
+//■論理演算子
+class JSample1_1 {
+	public static void main(String[] args) {
+		int a = 7;
+		int b = 4;
+		
+		//論理積
+		System.out.println(a < 0 && b > 5); //出力結果：false
+		System.out.println(a < 5 && b > 3); //出力結果：false
+		System.out.println(a < 9 && b > 7); //出力結果：false
+		System.out.println(a < 9 && b > 3); //出力結果：true
+		
+		//論理和
+		System.out.println(a < 0 || b > 5); //出力結果：false
+		System.out.println(a < 5 || b > 3); //出力結果：true
+		System.out.println(a < 9 || b > 7); //出力結果：true
+		System.out.println(a < 9 || b > 3); //出力結果：true
+		
+		//論理否定
+		System.out.println(!(a > 0)); //出力結果：false
+		System.out.println(!(a > 9)); //出力結果：true
 	}
 }
