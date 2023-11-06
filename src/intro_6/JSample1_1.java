@@ -27,6 +27,7 @@ class JSample1_1 {
 */
 
 
+/*
 //■データ型
 class JSample1_1 {
 	public static void main(String[] args) {
@@ -43,5 +44,68 @@ class JSample1_1 {
 		System.out.println("f=" + f); //出力結果：f=3.14
 		System.out.println("c=" + c); //出力結果：c=花
 		System.out.println("b=" + b); //出力結果：b=true
+	}
+}
+*/
+
+
+/*
+//■変数に値を代入
+class JSample1_1 {
+	public static void main(String[] args) {
+		int old;
+		String name;
+		
+		old = 24;
+		name = "Tarou Yamada";
+		
+		System.out.println(old); //出力結果：24
+		System.out.println(name); //出力結果：Tarou Yamada
+	}
+}
+*/
+
+
+/*
+//■変数の初期化(変数の宣言と同時に値を代入)
+class JSample1_1 {
+	public static void main(String[] args) {
+		int old = 24;
+		String name = "Tarou Yamada";
+		
+		System.out.println(old); //出力結果：24
+		System.out.println(name); //出力結果：Tarou Yamada
+	}
+}
+*/
+
+
+/*
+//■変数に別の値を代入(=新しい値を代入)
+class JSample1_1 {
+	public static void main(String[] args) {
+		int result;
+		
+		result = 84;
+		System.out.println(result); //出力結果：84
+		
+		result = 76;
+		System.out.println(result); //出力結果：76
+	}
+}
+*/
+
+
+
+//■変数の値を取り出す
+class JSample1_1 {
+	public static void main(String[] args) {
+		int sum;
+		sum = 80 + 76 + 94;
+		System.out.println("合計：" + sum); //出力結果：合計：250
+		
+		int average;
+		average = sum / 3;
+		System.out.println("平均：" + average); //出力結果：平均：83
 	}
 }
