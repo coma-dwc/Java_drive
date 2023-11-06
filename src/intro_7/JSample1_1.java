@@ -203,7 +203,7 @@ class JSample1_1 {
 
 
 
-
+/*
 //■多重代入
 class JSample1_1 {
 	public static void main(String[] args) {
@@ -213,5 +213,27 @@ class JSample1_1 {
 		System.out.println(a); //出力結果：15
 		System.out.println(b); //出力結果：15
 		System.out.println(c); //出力結果：15
+	}
+}
+*/
+
+
+
+
+//■関係演算子と等価演算子
+class JSample1_1 {
+	public static void main(String[] args) {
+		int a = 7;
+		int b = 4;
+		
+		System.out.println("a = " + a); //出力結果：a = 7
+		System.out.println("b = " + b); //出力結果：b = 4
+		
+		System.out.println("a < b : " + (a < b)); //出力結果：a < b : false
+		System.out.println("a <= b : " + (a <= b)); //出力結果：a <= b : false
+		System.out.println("a > b : " + (a > b)); //出力結果：a > b : true
+		System.out.println("a >= b : " + (a >= b)); //出力結果：a >= b : true
+		System.out.println("a == b : " + (a == b)); //出力結果：a == b : false
+		System.out.println("a != b : " + (a != b)); //出力結果：a != b : true
 	}
 }
