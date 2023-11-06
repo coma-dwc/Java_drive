@@ -95,7 +95,7 @@ class JSample1_1 {
 
 
 
-
+/*
 //■括弧()を使った優先順位の変更
 class JSample1_1 {
 	public static void main(String[] args) {
@@ -106,5 +106,28 @@ class JSample1_1 {
 		System.out.println("10 + 8 / 2 * 4 = " + n1); //出力結果：10 + 8 / 2 * 4 = 26
 		System.out.println("(10 + 8 / 2) * 4 = " + n2); //出力結果：(10 + 8 / 2) * 4 = 56
 		System.out.println("((10 + 8) / 2) * 4 = " + n3); //出力結果：((10 + 8) / 2) * 4 = 36
+	}
+}
+*/
+
+
+
+
+//■インクリメント演算子とデクリメント演算子
+class JSample1_1 {
+	public static void main(String[] args) {
+		int num = 5;
+		
+		num++;
+		System.out.println(num); //出力結果：6
+		
+		num--;
+		System.out.println(num); //出力結果：5
+		
+		++num;
+		System.out.println(num); //出力結果：6
+		
+		--num;
+		System.out.println(num); //出力結果：5
 	}
 }
