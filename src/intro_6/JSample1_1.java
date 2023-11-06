@@ -96,7 +96,7 @@ class JSample1_1 {
 */
 
 
-
+/*
 //■変数の値を取り出す
 class JSample1_1 {
 	public static void main(String[] args) {
@@ -107,5 +107,20 @@ class JSample1_1 {
 		int average;
 		average = sum / 3;
 		System.out.println("平均：" + average); //出力結果：平均：83
+	}
+}
+*/
+
+
+
+
+//■varを使った変数宣言(※初期化で代入される値からデータ型を決定するので、必ず変数の宣言時に初期化する必要がある)
+class JSample1_1 {
+	public static void main(String[] args) {
+		var old = 24;
+		var name = "Yamada";
+		
+		System.out.println("年齢：" + old); //出力結果：年齢：24
+		System.out.println("氏名：" + name); //出力結果：氏名：Yamada
 	}
 }
