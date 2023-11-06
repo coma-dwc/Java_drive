@@ -52,7 +52,7 @@ class JSample1_1 {
 
 
 
-
+/*
 //■単項マイナス演算子
 class JSample1_1 {
 	public static void main(String[] args) {
@@ -60,5 +60,51 @@ class JSample1_1 {
 		
 		System.out.println(+num); //出力結果：10
 		System.out.println(-num); //出力結果：-10
+	}
+}
+*/
+
+
+
+/*
+//■演算子の優先順位
+class JSample1_1 {
+	public static void main(String[] args) {
+		int n1 = 10 * 5 + 4;
+		int n2 = 4 + 10 * 5;
+		
+		System.out.println("10 * 5 + 4 = " + n1); //出力結果：10 * 5 + 4 = 54
+		System.out.println("4 + 10 * 5 = " + n2); //出力結果：4 + 10 * 5 = 54
+	}
+}
+*/
+
+
+
+/*
+//■演算子の結合規則(優先順位が同じだった場合に、どの演算子から演算を行うのかを定めたもの)
+//左結合 or 右結合 の2種類ある
+class JSample1_1 {
+	public static void main(String[] args) {
+		int n = 10 - 5 - 3;
+		
+		System.out.println("10 - 5 - 3 = " + n); //出力結果：10 - 5 - 3 = 2
+	}
+}
+*/
+
+
+
+
+//■括弧()を使った優先順位の変更
+class JSample1_1 {
+	public static void main(String[] args) {
+		int n1 = 10 + 8 / 2 * 4;
+		int n2 = (10 + 8 / 2) * 4;
+		int n3 = ((10 + 8) / 2) * 4;
+		
+		System.out.println("10 + 8 / 2 * 4 = " + n1); //出力結果：10 + 8 / 2 * 4 = 26
+		System.out.println("(10 + 8 / 2) * 4 = " + n2); //出力結果：(10 + 8 / 2) * 4 = 56
+		System.out.println("((10 + 8) / 2) * 4 = " + n3); //出力結果：((10 + 8) / 2) * 4 = 36
 	}
 }
