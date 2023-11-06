@@ -198,7 +198,7 @@ class JSample1_1 {
 
 
 
-
+/*
 //■longからintやdoubleからintへ変換するときの注意点
 //(例：扱う範囲が狭いデータ型に対して広いデータ型を代入する時、場合によっては入りきらない値を代入してしまう可能性がある)
 //(int型の変数にlong型の値を代入した時や、int型の変数にfloat型の値を代入した場合など)
@@ -213,5 +213,21 @@ class JSample1_1 {
 		System.out.println("i1=：" + i1); //出力結果：i1=：2112454933
 		System.out.println("f2=：" + f2); //出力結果：f2=：123.45
 		System.out.println("i2=：" + i2); //出力結果：i2=：123
+	}
+}
+*/
+
+
+
+//■ラッパークラスの値を取得する
+//ラッパークラスのインスタンスを作成すると、インスタンスには対応する基本データ型の値が保管されています。
+//保管されている値を取得するには各クラスで定義されているメソッドを使います
+
+class JSample1_1 {
+	public static void main(String[] args) {
+		Integer i = Integer.valueOf(10); //引数に指定した値を持つIntegerクラスのインスタンスを作成(保管している数値：10)
+		int val = i.intValue(); //ラッパークラスのインスタンスが保管している値を対応する基本データ型の値として取得
+		
+		System.out.println("i = " + val); //出力結果：i = 10
 	}
 }
