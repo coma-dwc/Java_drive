@@ -38,7 +38,7 @@ class JSample1_1 {
 
 
 
-
+/*
 //■ゼロで除算した時の結果
 //int型の値を0で割ったり0で割った余りを取得するとプログラムの実行時に java.lang.ArithmeticException: / by zero というエラーが発生
 //double型の値を0で割る時結果を出力すると Infinity となります。0で割った余りを取得するとNaN となります。
@@ -46,5 +46,19 @@ class JSample1_1 {
 	public static void main(String[] args) {
 		System.out.println(10.0f / 0); //出力結果：Infinity
 		System.out.println(10.0f % 0); //出力結果：NaN
+	}
+}
+*/
+
+
+
+
+//■単項マイナス演算子
+class JSample1_1 {
+	public static void main(String[] args) {
+		int num = 10;
+		
+		System.out.println(+num); //出力結果：10
+		System.out.println(-num); //出力結果：-10
 	}
 }
