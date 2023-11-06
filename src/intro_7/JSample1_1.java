@@ -241,7 +241,7 @@ class JSample1_1 {
 
 
 
-
+/*
 //■論理演算子
 class JSample1_1 {
 	public static void main(String[] args) {
@@ -263,5 +263,25 @@ class JSample1_1 {
 		//論理否定
 		System.out.println(!(a > 0)); //出力結果：false
 		System.out.println(!(a > 9)); //出力結果：true
+	}
+}
+*/
+
+
+
+
+
+//■条件演算子(三項演算子)
+class JSample1_1 {
+	public static void main(String[] args) {
+		int score;
+		
+		score = 70;
+		System.out.print("Score=" + score + ":");
+		System.out.println(score > 70 ? "OK" : "NG"); //出力結果：Score=70:NG
+		
+		score = 84;
+		System.out.print("Score=" + score + ":");
+		System.out.println(score > 70 ? "OK" : "NG"); //出力結果：Score=84:OK
 	}
 }
