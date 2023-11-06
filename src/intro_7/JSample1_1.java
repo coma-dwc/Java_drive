@@ -112,7 +112,7 @@ class JSample1_1 {
 
 
 
-
+/*
 //■インクリメント演算子とデクリメント演算子
 class JSample1_1 {
 	public static void main(String[] args) {
@@ -129,5 +129,49 @@ class JSample1_1 {
 		
 		--num;
 		System.out.println(num); //出力結果：5
+	}
+}
+*/
+
+
+
+
+/*
+//■ビット演算子の使い方
+class JSample1_1 {
+	public static void main(String[] args) {
+		int i1 = 85 & 15;
+		int i2 = 85 | 15;
+		int i3 = 85 ^ 15;
+		int i4 = ~85;
+		
+		System.out.println("85 & 15 = " + i1); //出力結果：85 & 15 = 5 (論理積：ビットAND)
+		System.out.println("85 | 15 = " + i2); //出力結果：85 | 15 = 95 (論理和：ビットOR)
+		System.out.println("85 ^ 15 = " +i3); //出力結果：85 ^ 15 = 90 (排他的論理和：ビットXOR)
+		System.out.println("~85 = " + i4); //出力結果：~85 = -86 (反転：ビットNOT)
+	}
+}
+*/
+
+
+
+
+
+//■シフト演算子の使い方
+class JSample1_1 {
+	public static void main(String[] args) {
+		int i1 = 21 << 2;
+		int i2 = 21 >> 2;
+		int i3 = 21 >>> 2;
+		
+		System.out.println("21 << 2 = " + i1); //出力結果：21 << 2 = 84
+		System.out.println("21 >> 2 = " +i2); //出力結果：21 >> 2 = 5
+		System.out.println("21 >>> 2 = " +i3); //出力結果：21 >>> 2 = 5
+		
+		int i4 = -92 >> 2;
+		int i5 = -92 >>> 2;
+		
+		System.out.println("-92 >> 2 = " +i4); //出力結果：-92 >> 2 = -23
+		System.out.println("-92 >>> 2 = " +i5); //出力結果：-92 >>> 2 = 1073741801
 	}
 }
