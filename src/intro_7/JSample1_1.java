@@ -270,7 +270,7 @@ class JSample1_1 {
 
 
 
-
+/*
 //■条件演算子(三項演算子)
 class JSample1_1 {
 	public static void main(String[] args) {
@@ -283,5 +283,17 @@ class JSample1_1 {
 		score = 84;
 		System.out.print("Score=" + score + ":");
 		System.out.println(score > 70 ? "OK" : "NG"); //出力結果：Score=84:OK
+	}
+}
+*/
+
+
+
+//■文字列の連結(+演算子)
+class JSample1_1 {
+	public static void main(String[] args) {
+		System.out.println(45 + 18 + "point"); //出力結果：63point
+		System.out.println("point" + 45 + 18); //出力結果：point4518
+		System.out.println("point" + (45 + 18)); //出力結果：point63
 	}
 }
