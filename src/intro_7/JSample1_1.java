@@ -156,7 +156,7 @@ class JSample1_1 {
 
 
 
-
+/*
 //■シフト演算子の使い方
 class JSample1_1 {
 	public static void main(String[] args) {
@@ -173,5 +173,45 @@ class JSample1_1 {
 		
 		System.out.println("-92 >> 2 = " +i4); //出力結果：-92 >> 2 = -23
 		System.out.println("-92 >>> 2 = " +i5); //出力結果：-92 >>> 2 = 1073741801
+	}
+}
+*/
+
+
+
+
+/*
+//■代入演算子
+class JSample1_1 {
+	public static void main(String[] args) {
+		int num;
+		
+		num = 10;
+		System.out.println(num); //出力結果：10
+		
+		num += 5;
+		System.out.println(num); //出力結果：15
+		
+		num = 8;
+		System.out.println(num); //出力結果：8
+		
+		num *= 4;
+		System.out.println(num); //出力結果：32
+	}
+}
+*/
+
+
+
+
+//■多重代入
+class JSample1_1 {
+	public static void main(String[] args) {
+		int a, b, c;
+		
+		a = b = c = 15;
+		System.out.println(a); //出力結果：15
+		System.out.println(b); //出力結果：15
+		System.out.println(c); //出力結果：15
 	}
 }
