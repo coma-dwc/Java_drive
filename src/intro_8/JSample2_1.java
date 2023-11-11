@@ -198,7 +198,7 @@ Over 10000
 
 //■ラベル付きbreak文
 //ラベル付きのbreak文にすることで任意の位置にある繰り返し処理を終了することが出来る (break ラベル;)
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		
@@ -236,5 +236,77 @@ i * j = 3
 i * j = 6
 i * j = 9
 i * j = 12
+End
+*/
+
+
+//■continue文
+//continue文が実行されると、現在の繰り返し処理のブロック内でcontinue文以降の処理をスキップし次の繰り返し処理へ移る
+/*
+class JSample2_1 {
+	public static void main(String[] args) {
+		for(int i = 1; i < 10; i++) {
+			if(i % 3 == 0) {
+				continue;
+			}
+			
+			System.out.println("i = " + i);
+		}
+		
+		System.out.println("End");
+	}
+}
+/*
+出力結果：(数値が3の倍数だった場合にはcontinue文を使って残りの処理をスキップ)
+i = 1
+i = 2
+i = 4
+i = 5
+i = 7
+i = 8
+End
+*/
+
+
+//■繰り返し処理が多重になっている場合
+//繰り返し処理が多重になっている場合にcontinue文が実行された場合はcontinue文を含む一番内側の繰り返し処理がスキップされる
+
+
+//■ラベル付きcontinue文
+//ラベル付きのcontinue文にすることで任意の位置にある繰り返し処理の残りの処理をスキップして次の繰り返し処理へ進むことが出来る
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		
+		Outer:
+		for(int i = 1; i < 6; i++) {
+			
+			Innter:
+			for(int j = 1; j < 6; j++) {
+				if(i * j % 4 == 0) {
+					continue Outer;
+				}
+				
+				System.out.println(i + " * " + j + " = " + i * j);
+			}
+			
+			System.out.println("Next");
+		}
+		
+		System.out.println("End");
+	}
+}
+/*
+出力結果：
+1 * 1 = 1
+1 * 2 = 2
+1 * 3 = 3
+2 * 1 = 2
+3 * 1 = 3
+3 * 2 = 6
+3 * 3 = 9
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
 End
 */
