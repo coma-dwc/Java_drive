@@ -143,7 +143,7 @@ no = 6
 
 
 //■拡張for文(for-each文)を使って要素を順に取得する
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String pref[] = {"北海道", "東京都", "神奈川県"};
@@ -158,4 +158,83 @@ class JSample2_1 {
 北海道
 東京都
 神奈川県
+*/
+
+
+
+//■break文
+//break文が実行されると現在の繰り返し処理を強制的に終了する
+/*
+class JSample2_1 {
+	public static void main(String[] args) {
+		int num = 1;
+		
+		for(int i = 0; i < 30; i++) {
+			num *= 5;
+			System.out.println("num = " + num);
+			
+			if(num > 10000) {
+				System.out.println("Over 10000");
+				break;
+			}
+		}
+	}
+}
+/*
+出力結果：
+num = 5
+num = 25
+num = 125
+num = 625
+num = 3125
+num = 15625
+Over 10000
+*/
+
+
+//■繰り返し処理が多重になっている場合
+//繰り返し処理が多重になっている場合にbreak文が実行された場合は、break文を含む一番内側の繰り返し処理が終了する
+
+
+//■ラベル付きbreak文
+//ラベル付きのbreak文にすることで任意の位置にある繰り返し処理を終了することが出来る (break ラベル;)
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		
+		Outer:
+		for(int i = 1; i < 5; i++) {
+			
+			Inner:
+			for(int j = 1; j < 5; j++) {
+				System.out.println("i * j = " + i * j);
+				
+				if(i * j > 10) {
+					break Outer;
+				}
+			}
+			
+			System.out.println("Next");
+		}
+		
+		System.out.println("End");
+	}
+}
+/*
+出力結果：
+i * j = 1
+i * j = 2
+i * j = 3
+i * j = 4
+Next
+i * j = 2
+i * j = 4
+i * j = 6
+i * j = 8
+Next
+i * j = 3
+i * j = 6
+i * j = 9
+i * j = 12
+End
 */
