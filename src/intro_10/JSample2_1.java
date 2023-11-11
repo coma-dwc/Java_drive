@@ -395,7 +395,7 @@ class JSample2_1 {
 //■配列の要素を昇順・降順にソートする(sort) 
 //Arrays.sortメソッドを使用
 
-
+/*
 import java.util.Arrays;
 
 class JSample2_1 {
@@ -411,4 +411,46 @@ class JSample2_1 {
 出力結果：
 [12, 24, 18, 35, 21]
 [12, 18, 21, 24, 35]
+*/
+
+
+
+//■配列の文字列表現を取得する(toString,deepToString)
+//Arrays.toString メソッドを使用すると配列の要素に格納された値を使って配列を文字列で表現したものを取得することができる
+
+//配列の文字列表現を取得
+/*
+import java.util.Arrays;
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		double[] src = {3.75, 0.52, 14.1};
+		
+		System.out.println(src);
+		System.out.println(Arrays.toString(src));
+	}
+}
+/*
+出力結果：
+[D@5ca881b5
+[3.75, 0.52, 14.1]
+*/
+
+
+//多次元配列の場合の文字列表現を取得
+
+import java.util.Arrays;
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		int[][] src = {{32, 18}, {12, 27}};
+		
+		System.out.println(Arrays.toString(src));
+		System.out.println(Arrays.deepToString(src));
+	}
+}
+/*
+出力結果：
+[[I@5ca881b5, [I@24d46ca6]
+[[32, 18], [12, 27]]
 */
