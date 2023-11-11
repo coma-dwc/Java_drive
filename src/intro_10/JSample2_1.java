@@ -104,7 +104,7 @@ Melon
 
 //■配列の長さを取得する(length)
 //配列の長さとは配列に含まれる要素の数
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		double[] num = new double[3];
@@ -123,4 +123,42 @@ class JSample2_1 {
 num[0] = 5.24
 num[1] = 8.0
 num[2] = 12.375
+*/
+
+
+
+//■多次元配列を作成する
+//配列の要素に別の配列が格納されている配列を2次元配列
+//配列の要素に2次元配列が格納されているのを3次元配列などと呼び
+//総称して多次元配列と呼ぶ
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		int[][] num = new int[2][];
+		
+		num[0] = new int[3];
+		num[0][0] = 78;
+		num[0][1] = 64;
+		num[0][2] = 59;
+		
+		num[1] = new int[3];
+		num[1][0] = 58;
+		num[1][1] = 92;
+		num[1][2] = 82;
+		
+		for(int i = 0; i < 2; i++) {
+			for(int j = 0; j < 3; j++) {
+				System.out.println("num[" + i + "][" + j + "] = " + num[i][j]);
+			}
+		}
+	}
+}
+/*
+出力結果：
+num[0][0] = 78
+num[0][1] = 64
+num[0][2] = 59
+num[1][0] = 58
+num[1][1] = 92
+num[1][2] = 82
 */
