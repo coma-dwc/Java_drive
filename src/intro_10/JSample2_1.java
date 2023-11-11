@@ -256,7 +256,7 @@ class JSample2_1 {
 //■配列の指定範囲の要素から新しい配列を作成する(copyOfRange)
 
 //配列をまるまるコピーして新しい配列を作るにはArrays.copyOfメソッドを使用
-
+/*
 import java.util.Arrays;
 
 class JSample2_1 {
@@ -272,4 +272,32 @@ class JSample2_1 {
 出力結果：
 [12, 24, 18, 35, 21]
 [24, 18, 35]
+*/
+
+
+
+//■2つの配列を連結して新しい配列を作成する
+//配列のコピーで使用したSystem.arraycopyメソッドを使用して手動で配列と配列を連結して新しい配列を作成することが出来る
+
+import java.util.Arrays;
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		int[] src1 = {28, 14, 35, 19};
+		int[] src2 = {17, 40, 23};
+		int[] dst = new int[src1.length + src2.length];
+		
+		System.arraycopy(src1, 0, dst, 0, src1.length);
+		System.arraycopy(src2, 0, dst, src1.length, src2.length);
+		
+		System.out.println(Arrays.toString(src1));
+		System.out.println(Arrays.toString(src2));
+		System.out.println(Arrays.toString(dst));
+	}
+}
+/*
+出力結果：
+[28, 14, 35, 19]
+[17, 40, 23]
+[28, 14, 35, 19, 17, 40, 23]
 */
