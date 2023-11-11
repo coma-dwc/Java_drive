@@ -191,7 +191,7 @@ num[1][2] = 48
 
 
 //■多次元配列の長さを取得する(length)
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		int[][] num = {{87, 54}, {76, 92, 48, 58, 84}};
@@ -216,3 +216,28 @@ num[1][4] = 84
 //int型のデータを格納する配列を格納する2次元配列を作成し、要素に対してそれぞれ値を格納した後で
 //すべての要素の値を順番に参照して画面に表示した。
 //繰り返しの回数はlengthフィールドの値を参照しているので、配列の要素がそれぞれ異なっている場合でも大丈夫
+
+
+
+//■配列のすべての要素を指定した値で埋める(fill)
+//配列を宣言し配列を作成した後、要素に値を代入することが出来るが、Arrays.fillメソッドを使用することで全ての要素に対して特定の値を代入することが出来る
+//Arrays.fillメソッドを使って配列のすべての要素を指定した値で埋める方法
+
+import java.util.Arrays;
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		int[] a = new int[3];
+		Arrays.fill(a, 10);
+		
+		System.out.println(a[0]);
+		System.out.println(a[1]);
+		System.out.println(a[2]);
+	}
+}
+/*
+出力結果：
+10
+10
+10
+*/
