@@ -1,5 +1,7 @@
 package intro_10;
 
+import java.util.Arrays;
+
 //■配列の宣言と作成
 /*
 class JSample2_1 {
@@ -222,7 +224,7 @@ num[1][4] = 84
 //■配列のすべての要素を指定した値で埋める(fill)
 //配列を宣言し配列を作成した後、要素に値を代入することが出来るが、Arrays.fillメソッドを使用することで全ての要素に対して特定の値を代入することが出来る
 //Arrays.fillメソッドを使って配列のすべての要素を指定した値で埋める方法
-
+/*
 import java.util.Arrays;
 
 class JSample2_1 {
@@ -249,3 +251,25 @@ class JSample2_1 {
 
 //コピーした時に要素の参照先をコピーする方式をshallowコピー
 //要素の値が参照型だった場合、参照先をコピーするのではなく参照しているインスタンスそのものを複製し、その参照先を要素に格納する方式をdeepコピー
+
+
+//■配列の指定範囲の要素から新しい配列を作成する(copyOfRange)
+
+//配列をまるまるコピーして新しい配列を作るにはArrays.copyOfメソッドを使用
+
+import java.util.Arrays;
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		int[] src = {12, 24, 18, 35, 21};
+		int[] dst = Arrays.copyOfRange(src, 1, 4);
+		
+		System.out.println(Arrays.toString(src));
+		System.out.println(Arrays.toString(dst));
+	}
+}
+/*
+出力結果：
+[12, 24, 18, 35, 21]
+[24, 18, 35]
+*/
