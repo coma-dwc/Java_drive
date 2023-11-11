@@ -48,7 +48,7 @@ i = 5, d = 2.8000000000000003
 
 
 //■for文のブロック内に別のfor文を記述
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		for(int i = 1; i < 3; i++) {
@@ -62,12 +62,45 @@ class JSample2_1 {
 }
 /*
  * 出力結果：
- * i = 1, j = 1, k = 1
- * i = 1, j = 1, k = 2
- * i = 1, j = 2, k = 1
- * i = 1, j = 2, k = 2
- * i = 2, j = 1, k = 1
- * i = 2, j = 1, k = 2
- * i = 2, j = 2, k = 1
- * i = 2, j = 2, k = 2
+i = 1, j = 1, k = 1
+i = 1, j = 1, k = 2
+i = 1, j = 2, k = 1
+i = 1, j = 2, k = 2
+i = 2, j = 1, k = 1
+i = 2, j = 1, k = 2
+i = 2, j = 2, k = 1
+i = 2, j = 2, k = 2
  */
+
+
+
+
+
+//■while文繰り返し
+/*
+class JSample2_1 {
+	public static void main(String[] args) {
+		int num = 1;
+		
+		while(num < 100) {
+			System.out.println("num = " + num);
+			num *= 2;
+		}
+	}
+}
+/*
+出力結果：
+ num = 1
+num = 2
+num = 4
+num = 8
+num = 16
+num = 32
+num = 64
+*/
+
+
+//■whileで無限ループ
+//※無限ループを行いたい場合は条件式にboolean型のtrueを記述する。この場合は繰り返し処理のブロックの中で、何らかの条件を満たしたときに
+//break文などを使って繰り返し処理を抜ける必要がある
+
