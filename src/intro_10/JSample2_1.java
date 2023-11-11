@@ -83,7 +83,7 @@ String : null
 
 //■作成済みの配列変数に初期値を代入する
 //String型の配列を宣言すると同時に初期化を行う そのあとで配列の要素を順に参照して画面に表示している
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String[] str = {"Apple", "Orange", "Melon"};
@@ -98,4 +98,29 @@ class JSample2_1 {
 Apple
 Orange
 Melon
+*/
+
+
+
+//■配列の長さを取得する(length)
+//配列の長さとは配列に含まれる要素の数
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		double[] num = new double[3];
+		
+		num[0] = 5.24;
+		num[1] = 8.0;
+		num[2] = 12.375;
+		
+		for(int i = 0; i < num.length; i++) {
+			System.out.println("num[" + i + "] = " + num[i]);
+		}
+	}
+}
+/*
+出力結果：
+num[0] = 5.24
+num[1] = 8.0
+num[2] = 12.375
 */
