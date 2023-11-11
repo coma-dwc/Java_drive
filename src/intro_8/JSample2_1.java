@@ -90,7 +90,7 @@ class JSample2_1 {
 }
 /*
 出力結果：
- num = 1
+num = 1
 num = 2
 num = 4
 num = 8
@@ -104,3 +104,38 @@ num = 64
 //※無限ループを行いたい場合は条件式にboolean型のtrueを記述する。この場合は繰り返し処理のブロックの中で、何らかの条件を満たしたときに
 //break文などを使って繰り返し処理を抜ける必要がある
 
+
+
+//■do..while文を使った繰り返し(指定した条件式が真となる間は回数を決めずに処理を繰り返す)
+
+import java.util.Random;
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		int num;
+		Random rand = new Random();
+		
+		System.out.println("6が出たら終わりです");
+		
+		do {
+			num = rand.nextInt(6) + 1;
+			System.out.println("no = " + num);
+		} while (num != 6);
+	}
+}
+/*
+出力結果：
+6が出たら終わりです
+no = 2
+no = 5
+no = 1
+no = 3
+no = 2
+no = 2
+no = 6
+ */
+
+
+//■do..while文で無限ループ
+//※無限ループを行いたい場合は条件式にboolean型のtrueを記述する。この場合は繰り返し処理のブロックの中で、何らかの条件を満たしたときに
+//break文などを使って繰り返し処理を抜ける必要がある
