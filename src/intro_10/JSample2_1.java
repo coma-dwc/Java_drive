@@ -1,5 +1,5 @@
 package intro_10;
-
+/*
 import java.util.Arrays;
 
 //■配列の宣言と作成
@@ -278,7 +278,7 @@ class JSample2_1 {
 
 //■2つの配列を連結して新しい配列を作成する
 //配列のコピーで使用したSystem.arraycopyメソッドを使用して手動で配列と配列を連結して新しい配列を作成することが出来る
-
+/*
 import java.util.Arrays;
 
 class JSample2_1 {
@@ -300,4 +300,66 @@ class JSample2_1 {
 [28, 14, 35, 19]
 [17, 40, 23]
 [28, 14, 35, 19, 17, 40, 23]
+*/
+
+
+
+//■2つの配列の要素の値を比較する(equals,deepEquals)
+
+
+//Arrays.equalsメソッドを使って比較する
+/*
+import java.util.Arrays;
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		int[] a = {85, 78, 92};
+		int[] b = a;
+		int[] c = {85, 78, 92};
+		
+		System.out.println(a == b);
+		System.out.println(a == c);
+		System.out.println(b == c);
+		System.out.println(Arrays.equals(a,  b));
+		System.out.println(Arrays.equals(a,  c));
+		System.out.println(Arrays.equals(b,  c));
+	}
+}
+/*
+出力結果：
+true
+false
+false
+true
+true
+true
+*/
+
+
+//■Arrays.deepEqualsメソッドを使って比較する
+
+import java.util.Arrays;
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		int[][] a = {{10, 8}, {9, 14}};
+		int[][] b = a;
+		int[][] c = {{10, 8}, {9, 14}};
+		
+		System.out.println(Arrays.equals(a,  b));
+		System.out.println(Arrays.equals(a,  c));
+		System.out.println(Arrays.equals(b,  c));
+		System.out.println(Arrays.deepEquals(a,  b));
+		System.out.println(Arrays.deepEquals(a,  c));
+		System.out.println(Arrays.deepEquals(b,  c));
+	}
+}
+/*
+ * 出力結果：
+ * true
+false
+false
+true
+true
+true
 */
