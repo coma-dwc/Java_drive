@@ -166,7 +166,7 @@ num[1][2] = 82
 
 
 //■多次元配列の初期化
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		int[][] num = {{87, 54, 67}, {76, 92, 48}};
@@ -187,3 +187,32 @@ num[1][0] = 76
 num[1][1] = 92
 num[1][2] = 48
 */
+
+
+
+//■多次元配列の長さを取得する(length)
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		int[][] num = {{87, 54}, {76, 92, 48, 58, 84}};
+		
+		for(int i = 0; i < num.length; i++) {
+			for(int j = 0; j < num[i].length; j++) {
+				System.out.println("num[" + i + "][" + j + "] = " + num[i][j]);
+			}
+		}
+	}
+}
+/*
+出力結果：
+num[0][0] = 87
+num[0][1] = 54
+num[1][0] = 76
+num[1][1] = 92
+num[1][2] = 48
+num[1][3] = 58
+num[1][4] = 84
+*/
+//int型のデータを格納する配列を格納する2次元配列を作成し、要素に対してそれぞれ値を格納した後で
+//すべての要素の値を順番に参照して画面に表示した。
+//繰り返しの回数はlengthフィールドの値を参照しているので、配列の要素がそれぞれ異なっている場合でも大丈夫
