@@ -34,7 +34,7 @@ class JSample1_1 {
 
 
 //■複数の条件式を組み合わせる
-
+/*
 class JSample1_1 {
 	public static void main(String[] args) {
 		int[] point = {75, 94, 68};
@@ -59,3 +59,39 @@ class JSample1_1 {
 本田さんは判定Aです
 遠藤さんは判定Cです
 */
+
+
+
+//■switch文を使った条件分岐
+
+class JSample1_1 {
+	public static void main(String[] args) {
+		int[] classcode = {1, 3, 2};
+		String[] name = {"鈴木", "本田", "遠藤"};
+		
+		for(int i = 0; i < 3; i++) {
+			System.out.print(name[i] + "さんは");
+			
+			switch(classcode[i]) {
+				case 1:
+					System.out.println("Aクラスです");
+					break;
+				case 2:
+					System.out.println("Bクラスです");
+					break;
+				case 3:
+					System.out.println("Cクラスです");
+			}
+		}
+	}
+}
+/*
+出力結果：
+鈴木さんはAクラスです
+本田さんはCクラスです
+遠藤さんはBクラスです
+*/
+
+
+//■defaultラベル
+//switch文でdefaultラベルを使用すると、式を評価した値がいずれのラベルとも一致しない場合のラベルとして使用することが出来る
