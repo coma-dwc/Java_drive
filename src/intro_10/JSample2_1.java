@@ -94,8 +94,8 @@ class JSample2_1 {
 	}
 }
 /*
- * 出力結果：
- * Apple
+出力結果：
+Apple
 Orange
 Melon
 */
