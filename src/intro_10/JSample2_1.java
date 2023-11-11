@@ -367,7 +367,7 @@ true
 
 
 //■配列の要素を逆順に並び替える
-
+/*
 import java.util.Arrays;
 
 class JSample2_1 {
@@ -388,4 +388,27 @@ class JSample2_1 {
 出力結果：
 [12, 24, 18, 31, 17]
 [17, 31, 18, 24, 12]
+*/
+
+
+
+//■配列の要素を昇順・降順にソートする(sort) 
+//Arrays.sortメソッドを使用
+
+
+import java.util.Arrays;
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		int[] src = {12, 24, 18, 35, 21};
+		System.out.println(Arrays.toString(src));
+		
+		Arrays.sort(src);
+		System.out.println(Arrays.toString(src));
+	}
+}
+/*
+出力結果：
+[12, 24, 18, 35, 21]
+[12, 18, 21, 24, 35]
 */
