@@ -107,7 +107,7 @@ num = 64
 
 
 //■do..while文を使った繰り返し(指定した条件式が真となる間は回数を決めずに処理を繰り返す)
-
+/*
 import java.util.Random;
 
 class JSample2_1 {
@@ -139,3 +139,23 @@ no = 6
 //■do..while文で無限ループ
 //※無限ループを行いたい場合は条件式にboolean型のtrueを記述する。この場合は繰り返し処理のブロックの中で、何らかの条件を満たしたときに
 //break文などを使って繰り返し処理を抜ける必要がある
+
+
+
+//■拡張for文(for-each文)を使って要素を順に取得する
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String pref[] = {"北海道", "東京都", "神奈川県"};
+		
+		for(String str: pref) {
+			System.out.println(str);
+		}
+	}
+}
+/*
+出力結果：
+北海道
+東京都
+神奈川県
+*/
