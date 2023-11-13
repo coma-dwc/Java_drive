@@ -218,7 +218,7 @@ class JSample1_1 {
 
 
 //■return文
-
+/*
 class JSample1_1 {
 	public static void main(String[] args) {
 		int data[];
@@ -242,3 +242,52 @@ class JSample1_1 {
 15 / 4 = 3
 0で割ることはできません
 */
+
+
+
+//■メソッドのオーバーロード
+//メソッドを引数を付けて呼び出すとき、引数に記述する値のデータ型はメソッドで決められたものしか指定できない。
+//そのため、同じような機能を持つメソッドであっても引数のデータ型が異なれば別々のメソッドを用意する必要がある
+//Javaでは引数のデータ型や引数の数が完全に一致していなければ異なるメソッドに同じメソッド名を付けることが出来る。
+
+class JSample1_1 {
+	public static void main(String[] args) {
+		System.out.println(plus(10, 7));
+		System.out.println(plus(3.2, 4));
+		System.out.println(plus(7, 1.223));
+		System.out.println(plus(5.08, 2.4));
+	}
+	
+	private static int plus(int n1, int n2) {
+		System.out.println("int + int");
+		return n1 + n2;
+	}
+	
+	private static double plus(int n1, double d1) {
+		System.out.println("int + double");
+		return n1 + d1;
+	}
+	
+	private static double plus(double d1, int n1) {
+		System.out.println("double + int");
+		return n1 + d1;
+	}
+	
+	private static double plus(double d1, double d2) {
+		System.out.println("double + double");
+		return d1 + d2;
+	}
+}
+/*
+出力結果：
+int + int
+17
+double + int
+7.2
+int + double
+8.223
+double + double
+7.48
+*/
+
+//引数のデータ型によって呼び出されるメソッドが決まっている
