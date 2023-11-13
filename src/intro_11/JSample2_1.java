@@ -224,7 +224,7 @@ true
 
 
 //■文字列と文字列の大きさを比較する(String.compareToメソッド)
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String str1 = "東京都港区";
@@ -246,4 +246,23 @@ class JSample2_1 {
 8194      //港と中のUnicode値の差が8194
 港:28207  //str1の3番目の位置の文字(港)のUnicode値が28207
 中:20013  //str4の3番目の位置の文字(中)のUnicode値が20013
+*/
+
+
+
+//■文字列の長さを取得する(String.lengthメソッド)
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String msg1 = "Hello";
+		String msg2 = "東京都港区赤坂";
+		
+		System.out.println(msg1 + "の長さは" + msg1.length());
+		System.out.println(msg2 + "の長さは" + msg2.length());
+	}
+}
+/*
+出力結果：
+Helloの長さは5
+東京都港区赤坂の長さは7
 */
