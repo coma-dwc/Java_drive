@@ -204,8 +204,8 @@ false
 
 
 
-//■文字列と文字列を比較
-
+//■文字列と文字列を比較(String.equals)
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String msg1 = "Hello";
@@ -219,4 +219,31 @@ class JSample2_1 {
 出力結果：
 false
 true
+*/
+
+
+
+//■文字列と文字列の大きさを比較する(String.compareToメソッド)
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String str1 = "東京都港区";
+		String str2 = "東京都港区";
+		String str3 = "東京都";
+		String str4 = "東京都中央区";
+		
+		System.out.println(str1.compareTo(str2));
+		System.out.println(str1.compareTo(str3));
+		System.out.println(str1.compareTo(str4));
+		System.out.println(str1.charAt(3) + ":" + Integer.toString(str1.charAt(3)));
+		System.out.println(str4.charAt(3) + ":" + Integer.toString(str4.charAt(3)));
+	}
+}
+/*
+出力結果：
+0    //str1とstr2の文字列は全く同じ値を持つので0
+2    //str1の長さ(5文字)からstr3の長さ(3文字)を引いた2が戻り値
+8194      //港と中のUnicode値の差が8194
+港:28207  //str1の3番目の位置の文字(港)のUnicode値が28207
+中:20013  //str4の3番目の位置の文字(中)のUnicode値が20013
 */
