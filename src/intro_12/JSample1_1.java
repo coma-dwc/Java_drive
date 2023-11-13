@@ -101,7 +101,7 @@ num1 - num2 = -7
 
 
 //■引数に配列やクラスオブジェクトを渡す
-
+/*
 class JSample1_1 {
 	public static void main(String[] args) {
 		int num = 8;
@@ -127,4 +127,62 @@ num = 8
 array[0] = 10
 num = 8
 array[0] = 12
+*/
+
+
+
+//■戻り値を使ってメソッドから値を返す
+
+//メソッドに渡された値をメソッド内で2倍し、その結果を呼び出し元に返す
+/*
+class JSample1_1 {
+	public static void main(String[] args) {
+		int kekka;
+		
+		kekka = bai(9);
+		System.out.println(kekka);
+		
+		kekka = bai(5);
+		System.out.println(kekka);
+	}
+	
+	private static int bai(int n) {
+		return n * 2;
+	}
+}
+/*
+出力結果：
+18
+10
+*/
+
+
+//メソッド内で条件分岐を行い、戻り値で返す値を二通り記述
+
+class JSample1_1 {
+	public static void main(String[] args) {
+		int num;
+		String kekka;
+		
+		num = 9;
+		kekka = hantei(num);
+		System.out.println(num + "は" + kekka);
+		
+		num = 6;
+		kekka = hantei(num);
+		System.out.println(num + "は" + kekka);
+	}
+	
+	private static String hantei(int n) {
+		if(n % 2 == 0) {
+			return "偶数";
+		} else {
+			return "奇数";
+		}
+	}
+}
+/*
+出力結果：
+9は奇数
+6は偶数
 */
