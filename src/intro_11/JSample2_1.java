@@ -269,7 +269,7 @@ Helloの長さは5
 
 
 //■文字列の文字の数(コードポイントの数)を取得する(String.codePointCountメソッド)
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String msg1 = "東京都港区赤坂";
@@ -283,4 +283,27 @@ class JSample2_1 {
 出力結果：
 7
 2
+*/
+
+
+//■文字列から指定したインデックスの文字を取得する(String.charAtメソッド)
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String msg = "東京都港区赤坂";
+		
+		for(int i = 0; i < msg.length(); i++) {
+			System.out.println(i + ";" + msg.charAt(i));
+		}
+	}
+}
+/*
+出力結果：
+0;東
+1;京
+2;都
+3;港
+4;区
+5;赤
+6;坂
 */
