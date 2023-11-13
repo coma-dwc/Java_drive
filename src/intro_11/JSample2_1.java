@@ -251,7 +251,7 @@ class JSample2_1 {
 
 
 //■文字列の長さを取得する(String.lengthメソッド)
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String msg1 = "Hello";
@@ -265,4 +265,22 @@ class JSample2_1 {
 出力結果：
 Helloの長さは5
 東京都港区赤坂の長さは7
+*/
+
+
+//■文字列の文字の数(コードポイントの数)を取得する(String.codePointCountメソッド)
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String msg1 = "東京都港区赤坂";
+		String msg2 = "𪛊あ";
+		
+		System.out.println(msg1.codePointCount(0,  msg1.length()));
+		System.out.println(msg2.codePointCount(0,  msg2.length()));
+	}
+}
+/*
+出力結果：
+7
+2
 */
