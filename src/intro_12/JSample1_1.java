@@ -64,7 +64,7 @@ class JSample1_1 {
 
 
 //■引数を使ってメソッドに値を渡す
-
+/*
 class JSample1_1 {
 	public static void main(String[] args) {
 		int num1, num2;
@@ -96,4 +96,35 @@ num1 - num2 = 16
 num1 = 15,num2 = 22
 num1 + num2 = 37
 num1 - num2 = -7
+*/
+
+
+
+//■引数に配列やクラスオブジェクトを渡す
+
+class JSample1_1 {
+	public static void main(String[] args) {
+		int num = 8;
+		int array[] = {10, 4};
+		
+		System.out.println("num = " + num);
+		System.out.println("array[0] = " + array[0]);
+		
+		henkou(num, array);
+		
+		System.out.println("num = " + num);
+		System.out.println("array[0] = " + array[0]);
+	}
+	
+	private static void henkou(int num, int array[]) {
+		num = 5;
+		array[0] = 12;
+	}
+}
+/*
+出力結果：
+num = 8
+array[0] = 10
+num = 8
+array[0] = 12
 */
