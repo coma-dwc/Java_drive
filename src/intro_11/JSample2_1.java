@@ -384,7 +384,7 @@ class JSample2_1 {
 
 
 //String.stripメソッド(trimメソッドとほぼ同じ使い方)※全角スペースも取り除かれる
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String msg = "　AB CD　"; //全角スペース
@@ -401,4 +401,35 @@ class JSample2_1 {
 [AB CD]  //②全角スペースを取り除く
 [AB CD　]  //③先頭のスペースを取り除く
 [　AB CD]  //④末尾のスペースを取り除く
+*/
+
+
+
+//■文字列に含まれる文字を大文字または小文字に変換する(String.toUpperCaseメソッド、String.toLowerCaseメソッド)
+
+//String.toUpperCaseメソッド(大文字に変換)
+//String.toLowerCaseメソッド(小文字に変換)
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String str1 = "TeaCup";
+		String str2 = "M o u s e";
+		
+		System.out.println(str1);
+		System.out.println(str1.toUpperCase());
+		System.out.println(str1.toLowerCase());
+		
+		System.out.println(str2);
+		System.out.println(str2.toUpperCase());
+		System.out.println(str2.toLowerCase());
+	}
+}
+/*
+出力結果：
+TeaCup
+TEACUP
+teacup
+M o u s e
+M O U S E
+m o u s e
 */
