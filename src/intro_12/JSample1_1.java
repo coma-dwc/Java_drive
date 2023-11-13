@@ -191,7 +191,7 @@ class JSample1_1 {
 
 //■戻り値として配列を返す
 //戻り値に指定できる値は一つだけですが、戻り値に複数の要素を持つ配列を指定すれば結果的に複数の値を呼び出し元に返すことも可能
-
+/*
 class JSample1_1 {
 	public static void main(String[] args) {
 		int data[];
@@ -213,4 +213,32 @@ class JSample1_1 {
 出力結果：
 10
 19
+*/
+
+
+
+//■return文
+
+class JSample1_1 {
+	public static void main(String[] args) {
+		int data[];
+		
+		test(15, 4);
+		test(7, 0);
+	}
+	
+	private static void test(int n1, int n2) {
+		if(n2 == 0) {
+			System.out.println("0で割ることはできません");
+			return;
+		}
+		
+		System.out.println(n1 + " / " + n2 + " = " + (n1 / n2));
+		return;
+	}
+}
+/*
+出力結果：
+15 / 4 = 3
+0で割ることはできません
 */
