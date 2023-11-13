@@ -33,7 +33,7 @@ class JSample1_1 {
 
 
 //■メソッドの定義
-
+/*
 class JSample1_1 {
 	public static void main(String[] args) {
 		hello();
@@ -60,4 +60,40 @@ class JSample1_1 {
 さようなら。
 こんにちは。
 さようなら。
+*/
+
+
+//■引数を使ってメソッドに値を渡す
+
+class JSample1_1 {
+	public static void main(String[] args) {
+		int num1, num2;
+		
+		num1 = 10; 
+		num2 = 8;
+		keisan(num1, num2);
+		
+		num1 = 23;
+		keisan(num1, 7);
+		
+		keisan(15, 22);
+	}
+	
+	private static void keisan(int n1, int n2) {
+		System.out.println("num1 = " + n1 + ",num2 = " + n2);
+		System.out.println("num1 + num2 = " + (n1 + n2));
+		System.out.println("num1 - num2 = " + (n1 - n2));
+	}
+}
+/*
+出力結果：
+num1 = 10,num2 = 8
+num1 + num2 = 18
+num1 - num2 = 2
+num1 = 23,num2 = 7
+num1 + num2 = 30
+num1 - num2 = 16
+num1 = 15,num2 = 22
+num1 + num2 = 37
+num1 - num2 = -7
 */
