@@ -457,8 +457,7 @@ class JSample2_1 {
 
 
 //■文字列の一部を別の文字や文字列に置換する(String.replaceメソッド)
-//文字列の中の指定した文字を別の文字に置換したり、指定した文字列を別の文字列に置換する
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String str1 = "Herro Java";
@@ -476,4 +475,26 @@ Herro Java
 Hello Java
 東京都港区
 東京都中央区
+*/
+
+
+
+//■指定した区切り文字で複数の文字列を連結し新しい文字列を作成する(String.joinメソッド)
+
+import java.util.List;
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String str1 = String.join("-", "Apple", "Grape", "Melon");
+		System.out.println(str1);
+		
+		List<String> strings = List.of("One", "Two", "Three");
+		String str2 = String.join(" * ", strings);
+		System.out.println(str2);
+	}
+}
+/*
+出力結果：
+Apple-Grape-Melon
+One * Two * Three
 */
