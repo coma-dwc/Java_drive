@@ -121,7 +121,7 @@ true
 
 
 //+演算子を使って文字列と連結
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		int i = 10;
@@ -146,4 +146,58 @@ class JSample2_1 {
 12
 7.82
 true
+*/
+
+
+
+
+//■文字列を数値に変換
+
+//ラッパークラスのparseIntメソッドを使用
+/*
+class JSample2_1 {
+	public static void main(String[] args) {
+		String si = "42";
+		String sd = "2.84";
+		String sb = "false";
+		
+		int i = Integer.parseInt(si);
+		double d = Double.parseDouble(sd);
+		boolean b = Boolean.parseBoolean(sb);
+		
+		System.out.println(i);
+		System.out.println(d);
+		System.out.println(b);
+	}
+}
+/* 
+出力結果：
+42
+2.84
+false
+*/
+
+
+//ラッパークラスのvalueOfメソッドを使用
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String si = "42";
+		String sd = "2.84";
+		String sb = "false";
+		
+		int i = Integer.valueOf(si).intValue();
+		double d = Double.valueOf(sd).doubleValue();
+		boolean b = Boolean.valueOf(sb).booleanValue();
+		
+		System.out.println(i);
+		System.out.println(d);
+		System.out.println(b);
+	}
+}
+/*
+出力結果：
+42
+2.84
+false
 */
