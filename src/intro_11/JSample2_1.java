@@ -409,7 +409,7 @@ class JSample2_1 {
 
 //String.toUpperCaseメソッド(大文字に変換)
 //String.toLowerCaseメソッド(小文字に変換)
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String str1 = "TeaCup";
@@ -432,4 +432,24 @@ teacup
 M o u s e
 M O U S E
 m o u s e
+*/
+
+
+
+//■文字列の最後に別の文字列を連結する(String.concatメソッド)
+
+//+演算子を使った文字列の連結(String.concatメソッドと同じような使い方)
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String str = "東京都";
+		
+		System.out.println(str.concat("港区赤坂"));
+		System.out.println(str + "港区赤坂");
+	}
+}
+/*
+出力結果：
+東京都港区赤坂
+東京都港区赤坂
 */
