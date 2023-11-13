@@ -333,7 +333,7 @@ class JSample2_1 {
 
 
 //■文字列から開始と終了インデックスを指定して部分文字列を取得する(String.substringメソッド)
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String msg = "東京都港区赤坂";
@@ -348,4 +348,57 @@ class JSample2_1 {
 港区      //msgのインデックス3から4までの部分文字列
 赤坂      //msgのインデックス5から6までの部分文字列
 港区赤坂  //msgの指定された位置(ここでは3)から最後までの部分文字列
+*/
+
+
+
+//■文字列の先頭と末尾から空白文字を取り除く(String.trimメソッド,String.stripメソッド)
+
+//String.trimメソッド(文字列の前後に空白文字が含まれる場合に、空白文字を取り除いた新しい文字列を取得)
+/*
+class JSample2_1 {
+	public static void main(String[] args) {
+		String msg1 = " AB CD ";   //半角スペース
+		String msg2 = "\tAB CD\n"; //水平タブと改行
+		String msg3 = "　AB CD　"; //前後に全角スペース
+		
+		System.out.println("[" + msg1 + "]");  //①デフォルトmsg1
+		System.out.println("[" + msg1.trim() + "]"); //②半角スペースを取り除く
+		System.out.println("[" + msg2 + "]");  //③デフォルトmsg2
+		System.out.println("[" + msg2.trim() + "]"); //④タブ、改行を取り除く
+		System.out.println("[" + msg3 + "]");  //⑤デフォルトmsg3
+		System.out.println("[" + msg3.trim() + "]"); //⑥(全角スペースは取り除けない)
+	}
+}
+/*
+出力結果：
+[ AB CD ] //①デフォルトmsg1
+[AB CD]  //②
+[	AB CD
+]  //③デフォルトmsg2
+[AB CD]  //④
+[　AB CD　]  //⑤デフォルトmsg3
+[　AB CD　]  //⑥
+*/
+
+
+
+//String.stripメソッド(trimメソッドとほぼ同じ使い方)※全角スペースも取り除かれる
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String msg = "　AB CD　"; //全角スペース
+		
+		System.out.println("[" + msg + "]");  //①デフォルトmsg
+		System.out.println("[" + msg.strip() + "]");  //②全角スペースを取り除く
+		System.out.println("[" + msg.stripLeading() + "]");  //③先頭の空白文字だけを取り除くstripLeadingメソッド
+		System.out.println("[" + msg.stripTrailing() + "]");  //④末尾の空白文字だけを取り除くstripTrailingメソッド
+	}
+}
+/*
+出力結果：
+[　AB CD　]  //①デフォルトmsg
+[AB CD]  //②全角スペースを取り除く
+[AB CD　]  //③先頭のスペースを取り除く
+[　AB CD]  //④末尾のスペースを取り除く
 */
