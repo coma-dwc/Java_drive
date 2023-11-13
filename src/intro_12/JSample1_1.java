@@ -295,7 +295,7 @@ double + double
 
 
 //■可変引数
-
+/*
 class JSample1_1 {
 	public static void main(String[] args) {
 		System.out.println(sum(4, 10));
@@ -319,3 +319,31 @@ class JSample1_1 {
 17
 0
 */
+
+
+
+//■固定引数と可変引数の組み合わせ
+//可変引数を使ってメソッドを定義した場合、通常の引数(可変引数に対して固定引数と呼ぶこともある)と組み合わせることが可能
+//※必ず固定引数から記述する必要がある 可変引数は一つのメソッドで一つしか記述できず、最後に記述しなければならない
+
+class JSample1_1 {
+	public static void main(String[] args) {
+		disp("[", "]", 10, 7, 8);
+		disp("【", "】", 128, 76);
+	  }
+	
+	private static void disp(String sb, String sa, int... num) {
+		for(int i = 0; i < num.length; i++) {
+			System.out.println(sb + num[i] + sa);
+		}
+	}
+}
+/*
+出力結果：
+[10]
+[7]
+[8]
+【128】
+【76】
+ */
+
