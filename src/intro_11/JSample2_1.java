@@ -568,7 +568,7 @@ false  //pngじゃないのでfalse
 
 //■文字列を正規表現パターンを使って分割する(String.splitメソッド)
 //分割する回数に制限を加えることも出来る
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String regex = ";|:";
@@ -608,4 +608,26 @@ class JSample2_1 {
 -- --
 [赤色]
 [青色;黄色:;]
+*/
+
+
+
+//■文字列の中の正規表現パターンとマッチする部分を置換する(String.replaceFirstメソッド,String.replaceAllメソッド)
+
+//replaceFirstメソッドでは最初にマッチした文字列を置換
+//replaceAllメソッドではマッチしたすべての文字列を置換
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String regex = "aA|Aa|aa";
+		String str = "AA BB aA Aa CC aa";
+		
+		System.out.println(str.replaceFirst(regex, "AA"));
+		System.out.println(str.replaceAll(regex, "AA"));
+	}
+}
+/*
+出力結果：
+AA BB AA Aa CC aa   //aAがAAに置換
+AA BB AA AA CC AA   //aA,Aa,aaがAAに置換
 */
