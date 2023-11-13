@@ -524,7 +524,7 @@ class JSample2_1 {
 
 
 //文字列が最初・最後に出現するインデックスを取得
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String str = "東京都と京都府";
@@ -537,4 +537,28 @@ class JSample2_1 {
 出力結果：
 1  //京都が最初に出現するインデックス(東京都 の中の 京都)
 4  //京都が最後に出現するインデックス(京都府 の中の 京都)
+*/
+
+
+
+
+//■文字列全体が正規表現パターンとマッチするか調べる(String.matchesメソッド)
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String str1 = "airplane.png";
+		String str2 = "lemon.png";
+		String str3 = "apple.jpeg";
+		String regex = "a.+png$";
+		
+		System.out.println(str1.matches(regex));
+		System.out.println(str2.matches(regex));
+		System.out.println(str3.matches(regex));
+	}
+}
+/*
+出力結果：
+true   //aから始まり、pngが続く文字列なのでtrue
+false  //aから始まらないのでfalse
+false  //pngじゃないのでfalse
 */
