@@ -480,7 +480,7 @@ Hello Java
 
 
 //■指定した区切り文字で複数の文字列を連結し新しい文字列を作成する(String.joinメソッド)
-
+/*
 import java.util.List;
 
 class JSample2_1 {
@@ -497,4 +497,44 @@ class JSample2_1 {
 出力結果：
 Apple-Grape-Melon
 One * Two * Three
+*/
+
+
+
+//■文字列の中で指定した文字または文字列が出現するインデックスを取得する(String.indexOfメソッド,String.lastIndexOfメソッド)
+
+//Stringクラスで用意されているindexOfメソッドは、対象の文字列の中で指定した文字や文字列が最初に出現するインデックスを返す
+//lastIndexOfメソッドは、最後に出現するインデックスを返す
+
+//文字が最初・最後に出現するインデックスを取得
+/*
+class JSample2_1 {
+	public static void main(String[] args) {
+		String str = "Hello World";
+		System.out.println(str.indexOf((int)'o'));
+		System.out.println(str.lastIndexOf((int)'o'));
+	}
+}
+/*
+出力結果：
+4  //oが最初に出現するインデックス(Helloのo)
+7  //oが最後に出現するインデックス(Worldのo)
+*/
+
+
+
+//文字列が最初・最後に出現するインデックスを取得
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String str = "東京都と京都府";
+		
+		System.out.println(str.indexOf("京都"));
+		System.out.println(str.lastIndexOf("京都"));
+	}
+}
+/*
+出力結果：
+1  //京都が最初に出現するインデックス(東京都 の中の 京都)
+4  //京都が最後に出現するインデックス(京都府 の中の 京都)
 */
