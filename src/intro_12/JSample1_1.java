@@ -158,7 +158,7 @@ class JSample1_1 {
 
 
 //メソッド内で条件分岐を行い、戻り値で返す値を二通り記述
-
+/*
 class JSample1_1 {
 	public static void main(String[] args) {
 		int num;
@@ -185,4 +185,32 @@ class JSample1_1 {
 出力結果：
 9は奇数
 6は偶数
+*/
+
+
+
+//■戻り値として配列を返す
+//戻り値に指定できる値は一つだけですが、戻り値に複数の要素を持つ配列を指定すれば結果的に複数の値を呼び出し元に返すことも可能
+
+class JSample1_1 {
+	public static void main(String[] args) {
+		int data[];
+		
+		data = init();
+		System.out.println(data[0]);
+		System.out.println(data[1]);
+	}
+	
+	private static int[] init() {
+		int data[] = new int[2];
+		data[0] = 10;
+		data[1] = 19;
+		
+		return data;
+	}
+}
+/*
+出力結果：
+10
+19
 */
