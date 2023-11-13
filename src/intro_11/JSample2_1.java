@@ -287,7 +287,7 @@ class JSample2_1 {
 
 
 //■文字列から指定したインデックスの文字を取得する(String.charAtメソッド)
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String msg = "東京都港区赤坂";
@@ -306,4 +306,27 @@ class JSample2_1 {
 4;区
 5;赤
 6;坂
+*/
+
+
+//■文字列から指定したインデックスのUnicodeコードポイントを取得する(String.codePointAtメソッド)
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String msg = "東京都港区赤坂";
+		
+		for(int i = 0; i < msg.length(); i++) {
+			System.out.println(i + ";" + msg.codePointAt(i));
+		}
+	}
+}
+/*
+出力結果：
+0;26481
+1;20140
+2;37117
+3;28207
+4;21306
+5;36196
+6;22338
 */
