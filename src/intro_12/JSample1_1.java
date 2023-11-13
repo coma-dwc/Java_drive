@@ -249,7 +249,7 @@ class JSample1_1 {
 //メソッドを引数を付けて呼び出すとき、引数に記述する値のデータ型はメソッドで決められたものしか指定できない。
 //そのため、同じような機能を持つメソッドであっても引数のデータ型が異なれば別々のメソッドを用意する必要がある
 //Javaでは引数のデータ型や引数の数が完全に一致していなければ異なるメソッドに同じメソッド名を付けることが出来る。
-
+/*
 class JSample1_1 {
 	public static void main(String[] args) {
 		System.out.println(plus(10, 7));
@@ -291,3 +291,31 @@ double + double
 */
 
 //引数のデータ型によって呼び出されるメソッドが決まっている
+
+
+
+//■可変引数
+
+class JSample1_1 {
+	public static void main(String[] args) {
+		System.out.println(sum(4, 10));
+		System.out.println(sum(7, 2, 8));
+		System.out.println(sum());
+	}
+	
+	private static int sum(int... nums) {
+		int sum = 0;
+		
+		for(int i = 0; i < nums.length; i++) {
+			sum += nums[i];
+		}
+		
+		return sum;
+	}
+}
+/*
+出力結果：
+14
+17
+0
+*/
