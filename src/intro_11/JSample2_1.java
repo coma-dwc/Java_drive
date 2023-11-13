@@ -439,7 +439,7 @@ m o u s e
 //■文字列の最後に別の文字列を連結する(String.concatメソッド)
 
 //+演算子を使った文字列の連結(String.concatメソッドと同じような使い方)
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String str = "東京都";
@@ -452,4 +452,28 @@ class JSample2_1 {
 出力結果：
 東京都港区赤坂
 東京都港区赤坂
+*/
+
+
+
+//■文字列の一部を別の文字や文字列に置換する(String.replaceメソッド)
+//文字列の中の指定した文字を別の文字に置換したり、指定した文字列を別の文字列に置換する
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String str1 = "Herro Java";
+		System.out.println(str1);
+		System.out.println(str1.replace('r', 'l'));
+		
+		String str2 = "東京都港区";
+		System.out.println(str2);
+		System.out.println(str2.replace("港区", "中央区"));
+	}
+}
+/*
+出力結果：
+Herro Java
+Hello Java
+東京都港区
+東京都中央区
 */
