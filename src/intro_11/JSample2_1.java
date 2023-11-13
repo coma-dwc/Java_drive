@@ -310,7 +310,7 @@ class JSample2_1 {
 
 
 //■文字列から指定したインデックスのUnicodeコードポイントを取得する(String.codePointAtメソッド)
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String msg = "東京都港区赤坂";
@@ -329,4 +329,23 @@ class JSample2_1 {
 4;21306
 5;36196
 6;22338
+*/
+
+
+//■文字列から開始と終了インデックスを指定して部分文字列を取得する(String.substringメソッド)
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String msg = "東京都港区赤坂";
+		
+		System.out.println(msg.substring(3, 5));
+		System.out.println(msg.substring(5, 7));
+		System.out.println(msg.substring(3));
+	}
+}
+/*
+出力結果：
+港区      //msgのインデックス3から4までの部分文字列
+赤坂      //msgのインデックス5から6までの部分文字列
+港区赤坂  //msgの指定された位置(ここでは3)から最後までの部分文字列
 */
