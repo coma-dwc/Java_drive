@@ -179,7 +179,7 @@ false
 
 
 //ラッパークラスのvalueOfメソッドを使用
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String si = "42";
@@ -200,4 +200,23 @@ class JSample2_1 {
 42
 2.84
 false
+*/
+
+
+
+//■文字列と文字列を比較
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String msg1 = "Hello";
+		String msg2 = new String(msg1);
+		
+		System.out.println(msg1 == msg2); //参照している文字列のオブジェクトが異なる場合はfalse
+		System.out.println(msg1.equals(msg2));
+	}
+}
+/*
+出力結果：
+false
+true
 */
