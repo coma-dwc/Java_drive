@@ -543,7 +543,7 @@ class JSample2_1 {
 
 
 //■文字列全体が正規表現パターンとマッチするか調べる(String.matchesメソッド)
-
+/*
 class JSample2_1 {
 	public static void main(String[] args) {
 		String str1 = "airplane.png";
@@ -561,4 +561,51 @@ class JSample2_1 {
 true   //aから始まり、pngが続く文字列なのでtrue
 false  //aから始まらないのでfalse
 false  //pngじゃないのでfalse
+*/
+
+
+
+
+//■文字列を正規表現パターンを使って分割する(String.splitメソッド)
+//分割する回数に制限を加えることも出来る
+
+class JSample2_1 {
+	public static void main(String[] args) {
+		String regex = ";|:";
+		String str = "赤色:青色;黄色:;";
+		
+		String[] result = str.split(regex, 0);   //split(regex, 0)は、末尾の空の要素を無視するので、空の部分文字列を除去して分割
+		for(int i = 0; i < result.length; i++) {
+			System.out.println("[" + result[i] + "]");
+		}
+		
+		System.out.println("-- --");
+		
+		result = str.split(regex, -1);          //split(regex, -1)は、末尾の空の要素を無視せずに分割するので[][]も含む
+		for(int i = 0; i < result.length; i++) {
+			System.out.println("[" + result[i] + "]");
+		}
+		
+		System.out.println("-- --");
+		
+		result = str.split(regex, 2);           //split(regex, 2)は、最大2つの要素に分割するので[赤色]と[青色;黄色:;]に分けて分割
+		for(int i = 0; i < result.length; i++) {
+			System.out.println("[" + result[i] + "]");
+		}
+	}
+}
+/*
+出力結果：
+[赤色]
+[青色]
+[黄色]
+-- --
+[赤色]
+[青色]
+[黄色]
+[]
+[]
+-- --
+[赤色]
+[青色;黄色:;]
 */
